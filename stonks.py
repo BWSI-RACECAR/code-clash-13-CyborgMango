@@ -43,8 +43,8 @@ class Solution:
         overMinIndex=0
         cashMoney=0
         for o in range(2):
+            maxDif=0
             for i in range(len(prices)):
-                maxDif=0
                 maxIndex=0
                 minIndex=0
                 for j in range(i+1,len(prices)):
@@ -54,7 +54,7 @@ class Solution:
                         maxIndex=j
                 overMaxIndex=maxIndex
                 overMinIndex=minIndex
-            cashMoney+=maxDif()
+            cashMoney+=maxDif
             prices=prices[j:len(prices)-1]
         return(cashMoney)
             
