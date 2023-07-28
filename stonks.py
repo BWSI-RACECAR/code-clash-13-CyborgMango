@@ -39,24 +39,12 @@ Total profit = 4 + 8 = 12.
 
 class Solution:
     def stonks(self, prices):
-        overMaxIndex=0
-        overMinIndex=0
-        cashMoney=0
-        for o in range(2):
-            maxDif=0
-            for i in range(len(prices)):
-                maxIndex=0
-                minIndex=0
-                for j in range(i+1,len(prices)):
-                    if j-i>maxDif:
-                        maxDif=j-i
-                        minIndex=i
-                        maxIndex=j
-                overMaxIndex=maxIndex
-                overMinIndex=minIndex
-            cashMoney+=maxDif
-            prices=prices[j:len(prices)-1]
-        return(cashMoney)
+        grid=[]
+        for i in range(len(prices)):
+            grid.append()
+            for j in prices:
+                grid[i].append(j-prices[i])
+        print(grid)
             
 
         #type prices: list of int
