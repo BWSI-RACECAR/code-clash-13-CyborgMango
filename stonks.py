@@ -41,7 +41,7 @@ class Solution:
     def stonks(self, prices):
         grid=[]
         for i in range(len(prices)):
-            grid.append()
+            grid.append([])
             for j in prices:
                 grid[i].append(j-prices[i])
         print(grid)
