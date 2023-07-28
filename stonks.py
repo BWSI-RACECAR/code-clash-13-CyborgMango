@@ -44,7 +44,8 @@ class Solution:
             grid.append([])
             for j in prices:
                 grid[i].append(j-prices[i])
-        print(grid)
+        for i in grid:
+            print(i)
             
 
         #type prices: list of int
