@@ -45,7 +45,6 @@ class Solution:
             for j in range(i+1,len(prices)-2):
                 for k in range(j+1,len(prices)-1):
                     for l in range(k+1,len(prices)):
-                        print(i+k-j-l)
                         if i+k-j-l>max:
                             max=i+k-j-l
         return(max)
