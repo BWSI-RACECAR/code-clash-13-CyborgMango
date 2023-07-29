@@ -43,12 +43,12 @@ class Solution:
         print(prices)
         for i in range(len(prices)):
             for j in range(i+1,len(prices)):
-                if j-i>max:
-                    max=j-i
+                if -i+j>max:
+                    max=-i+j
                 for k in range(j+1,len(prices)):
                     for l in range(k+1,len(prices)):
-                        if j+l-i-k>max:
-                            max=j+l-i-k
+                        if -i+j-k+l>max:
+                            max=-i+j-k+l
         return(max)
             
 
