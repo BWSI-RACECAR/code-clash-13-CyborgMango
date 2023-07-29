@@ -41,14 +41,18 @@ class Solution:
     def stonks(self, prices):
         max=0
         print(prices)
+        coords=[]
         for i in range(len(prices)):
             for j in range(i+1,len(prices)):
-                if -i+j>max:
+                if -prices[i]+prices[j]>max:
                     max=-i+j
+                    coord=[prices[i],prices[j]]
                 for k in range(j+1,len(prices)):
                     for l in range(k+1,len(prices)):
-                        if -i+j-k+l>max:
-                            max=-i+j-k+l
+                        if -prices[i]+prices[j]-prices[k]+prices[l]>max:
+                            max=-prices[i]+prices[j]-prices[k]+prices[l]
+                            coord=[prices[i],prices[j],prices[k],prices[l]]
+        print(coord)
         return(max)
             
 
