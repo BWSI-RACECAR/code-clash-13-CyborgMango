@@ -39,16 +39,14 @@ Total profit = 4 + 8 = 12.
 
 class Solution:
     def stonks(self, prices):
-        grid=[]
-        for i in range(len(prices)):
-            grid.append([])
-            for j in range(len(prices)):
-                if j>i:
-                    grid[i].append(prices[i]-prices[j])
-                else:
-                    grid[i].append(0)
-        for i in grid:
-            print(i)
+        max=0
+        for i in range(len(prices)-3):
+            for j in range(i+1,len(prices)-2):
+                for k in range(j+1,len(prices)-1):
+                    for l in range(k+1,len(prices)):
+                        if i+k-j-l>max:
+                            max=i+k-j-l
+        return(max)
             
 
         #type prices: list of int
